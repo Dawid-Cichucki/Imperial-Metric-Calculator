@@ -4,7 +4,7 @@ public class CalculatorMain {
     public static void main(String[] args) {
         ImperialToMetric itm = new ImperialToMetric();
         MetricToImperial mti = new MetricToImperial();
-        double test = 5;
+        double test = 0.1;
         DecimalFormat df2 = new DecimalFormat("#.##");
 
         System.out.println(df2.format(itm.fahrToCel(test)));
