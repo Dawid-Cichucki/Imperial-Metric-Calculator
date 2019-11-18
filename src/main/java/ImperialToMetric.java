@@ -14,8 +14,8 @@ DecimalFormat df2 = new DecimalFormat("#.###");
         return cm;
     }
 
-    public double poundToKg(double pund){
-        double kg = pund * 0.45359237;
+    public double poundToKg(double pound){
+        double kg = pound * 0.45359237;
         df2.format(kg);
         return kg;
     }
