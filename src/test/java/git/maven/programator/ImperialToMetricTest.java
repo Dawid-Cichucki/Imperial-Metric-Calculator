@@ -1,3 +1,5 @@
+package git.maven.programator;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -65,6 +67,6 @@ public class ImperialToMetricTest {
         Assertions.assertEquals(expected,imperialToMetric.fahrToCel(param));
     }
 
-    
+
 
 }

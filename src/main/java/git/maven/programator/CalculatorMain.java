@@ -1,3 +1,5 @@
+package git.maven.programator;
+
 import java.text.DecimalFormat;
 
 public class CalculatorMain {
