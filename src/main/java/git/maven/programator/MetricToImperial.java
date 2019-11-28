@@ -1,5 +1,7 @@
 package git.maven.programator;
 
+import com.sun.org.apache.xpath.internal.functions.WrongNumberArgsException;
+
 import java.text.DecimalFormat;
 
 public class MetricToImperial {
@@ -7,8 +9,7 @@ public class MetricToImperial {
 
     public double meterToFoot(double meter){
         if(meter < 0){
-            System.out.println("error");
-            return meter;
+            throw new IllegalArgumentException("less than 0");
         }
         double foot = meter * 3.280840;
         return foot;
@@ -16,8 +17,7 @@ public class MetricToImperial {
 
     public double cmToInch(double cm){
         if(cm < 0){
-            System.out.println("error");
-            return cm;
+            throw new IllegalArgumentException("less than 0");
         }
         double inch = cm * 2.54;
         return inch;
@@ -25,8 +25,7 @@ public class MetricToImperial {
 
     public double kgToPound(double kg){
         if(kg < 0){
-            System.out.println("error");
-            return kg;
+            throw new IllegalArgumentException("less than 0");
         }
         double pound = kg / 0.45359237;
         return pound;
@@ -39,8 +38,7 @@ public class MetricToImperial {
 
     public double litreToGal(double litre){
         if(litre < 0){
-            System.out.println("error");
-            return litre;
+            throw new IllegalArgumentException("less than 0");
         }
         double gal = litre * 4.546099;
         return gal;

@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class MetricToImperialTest {
     MetricToImperial metricToImperial = new MetricToImperial();
 
@@ -18,7 +20,7 @@ public class MetricToImperialTest {
     @Test
     void cmToInchesForLessThanZero(){
         double test = -1;
-        Assertions.assertEquals(test,metricToImperial.cmToInch(test));
+        assertThrows(IllegalArgumentException.class,() ->metricToImperial.cmToInch(test));
     }
 
     @ParameterizedTest
@@ -31,7 +33,7 @@ public class MetricToImperialTest {
     @Test
     void kgToPoundsForLessThanZero(){
         double test = -1;
-        Assertions.assertEquals(test,metricToImperial.kgToPound(test));
+        assertThrows(IllegalArgumentException.class,() ->metricToImperial.kgToPound(test));
     }
 
     @ParameterizedTest
@@ -44,7 +46,7 @@ public class MetricToImperialTest {
     @Test
     void feetToMetersForLessThanZero(){
         double test = -1;
-        Assertions.assertEquals(test,metricToImperial.meterToFoot(test));
+        assertThrows(IllegalArgumentException.class,() ->metricToImperial.meterToFoot(test));
     }
 
     @ParameterizedTest
@@ -57,7 +59,7 @@ public class MetricToImperialTest {
     @Test
     void litresToGallonsForLessThanZero(){
         double test = -1;
-        Assertions.assertEquals(test,metricToImperial.litreToGal(test));
+        assertThrows(IllegalArgumentException.class,() ->metricToImperial.litreToGal(test));
     }
 
     @ParameterizedTest
