@@ -11,7 +11,7 @@
     <distributionManagement>
     <repository>
         <uniqueVersion>false</uniqueVersion>
-        <id>TestWebApp_Repository</id>
+        <id>Imperial_Metric_Calculator</id>
         <url>file://E:\DCprogramator\deploy</url>
 
     </repository>
